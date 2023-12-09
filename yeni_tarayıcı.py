@@ -32,9 +32,9 @@ def tarayici(ip, port):
             pass
 
 def main():
-    tanım = argparse.ArgumentParser(description="Ağ taraması yapmak için şöyle kullanabilirsiniz: python yeni_tarayıcı.py -ip [IP Adresi] -port [Port Numarası]")
-    tanım.add_argument("-ip", dest="ip", help="IP adresi girin.")
-    tanım.add_argument("-port", dest="port", type=int, help="Port numarası girin.")
+    tanım = argparse.ArgumentParser(description="Ağ taraması yapmak için şöyle kullanabilirsiniz: python yeni_tarayıcı.py --ip [IP Adresi] --port [Port Numarası]")
+    tanım.add_argument("--ip", dest="ip", help="IP adresi girin.")
+    tanım.add_argument("--port", dest="port", type=int, help="Port numarası girin.")
     args = tanım.parse_args()
     ip = args.ip
     port = args.port
